@@ -1,13 +1,12 @@
 from brain_games.cli import (
     get_user_answer, generate_number, welcome_user, check_answer)
 
-DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
-
 
 def run_brain_even_game():
     """Brain Even game logic"""
     user_name = welcome_user()
-    print(DESCRIPTION)
+    description = 'Answer "yes" if the number is even, otherwise answer "no".'
+    print(description)
     game_round = 0
     while game_round < 3:
         number = generate_number()

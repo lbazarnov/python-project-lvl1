@@ -8,4 +8,8 @@
 
 ### Brain Even (and package installation aswell)
 
-[![brain_even](https://asciinema.org/a/xE1F27bzEkzX0nCtwK2stPERt.svg)](https://asciinema.org/a/xE1F27bzEkzX0nCtwK2stPERt)
+[![brain_even](https://asciinema.org/a/LgBch9aYRiyRXQNH4X3CcCRS6.svg)](https://asciinema.org/a/LgBch9aYRiyRXQNH4X3CcCRS6)
+
+### Brain Calc
+
+[![brain_calc](https://asciinema.org/a/JS8Vj3JS7BwtxtMFelmgvJBAO.svg)](https://asciinema.org/a/JS8Vj3JS7BwtxtMFelmgvJBAO)
