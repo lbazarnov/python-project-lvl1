@@ -4,6 +4,7 @@ from brain_games.cli import (
 
 
 def get_result(operator, first_number, second_number):
+    """Finds result of operation"""
     if operator == '+':
         result = first_number + second_number
         return result
