@@ -30,8 +30,8 @@ def run_brain_prime_game():
 
         if is_prime(number):
             correct_answer = 'yes'
-
-        correct_answer = 'no'
+        else:
+            correct_answer = 'no'
 
         user_answer = get_user_answer()
         game_round = check_answer(
