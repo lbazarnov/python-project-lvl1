@@ -39,7 +39,8 @@ def check_answer(user_answer, correct_answer, user_name, game_round):
         return game_round
     else:
         message = f"""'{user_answer}' is wrong answer ;(.
-        \nCorrect answer was '{correct_answer}'."""
+        \nCorrect answer was '{correct_answer}'.
+        \nLet's try again, {user_name}!"""
         print(message)
         game_round = 3
         return game_round
