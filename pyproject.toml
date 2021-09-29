@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "lbazarnov-brain-games"
+name = "hexlet-code"
 version = "0.1.0"
 description = "Brain Games — first learning project by hexlet.io programming school, which includes five arithmetic games"
 authors = ["lbazarnov"]
