@@ -1,11 +1,21 @@
 [tool.poetry]
-name = "hexlet-code"
+name = "lbazarnov-brain-games"
 version = "0.1.0"
-description = ""
-authors = ["Lev <16255087+lbazarnov@users.noreply.github.com>"]
+description = "Brain Games — first learning project by hexlet.io programming school, which includes five arithmetic games"
+authors = ["lbazarnov"]
+readme = "README.md"
 packages = [
   { include = "brain_games" },
 ]
+repository = "https://github.com/lbazarnov/python-project-lvl1"
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Programming Language :: Python :: 3',
+    'Intended Audience :: Education',
+    'Topic :: Games/Entertainment',
+    'Operating System :: OS Independent',
+]
+
 
 [tool.poetry.dependencies]
 python = "^3.8"
