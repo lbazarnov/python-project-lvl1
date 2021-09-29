@@ -8,12 +8,16 @@
 
 ### Brain Even (and package installation aswell)
 
-[![brain_even](https://asciinema.org/a/LgBch9aYRiyRXQNH4X3CcCRS6.svg)](https://asciinema.org/a/LgBch9aYRiyRXQNH4X3CcCRS6)
+[![brain_even](https://asciinema.org/a/cs4WkOXecL0AeOm4KptrxQ1AK.svg)](https://asciinema.org/a/cs4WkOXecL0AeOm4KptrxQ1AK)
 
 ### Brain Calc
 
-[![brain_calc](https://asciinema.org/a/JS8Vj3JS7BwtxtMFelmgvJBAO.svg)](https://asciinema.org/a/JS8Vj3JS7BwtxtMFelmgvJBAO)
+[![brain_calc](https://asciinema.org/a/EaZX91mffnBKveoA0fQ9lu084.svg)](https://asciinema.org/a/EaZX91mffnBKveoA0fQ9lu084)
 
 ### Brain GCD
 
 [![brain_gcd](https://asciinema.org/a/2FXdf6xDxlgVAXQfhANaSCbm6.svg)](https://asciinema.org/a/2FXdf6xDxlgVAXQfhANaSCbm6)
+
+### Brain Progression
+
+[![brain_progression](https://asciinema.org/a/fVsDrumDPg0nffpvGzJkk61r8.svg)](https://asciinema.org/a/fVsDrumDPg0nffpvGzJkk61r8)
