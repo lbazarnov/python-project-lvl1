@@ -1,5 +1,5 @@
 from random import choice
-from brain_games.cli import (
+from brain_games.engine import (
     get_user_answer, generate_number, welcome_user, check_answer)
 
 
