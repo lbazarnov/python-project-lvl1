@@ -1,6 +1,10 @@
 import prompt
 from random import randint
 
+ROUNDS_TOTAL = 3
+FIRST_NUMBER = 1
+LAST_NUMBER = 100
+
 
 def get_user_name():
     """Prompt user for his name"""
@@ -23,9 +27,7 @@ def get_user_answer():
 
 def generate_number():
     """Generates random number in range of 1 to 100"""
-    first_number = 1
-    last_number = 100
-    return randint(first_number, last_number)
+    return randint(FIRST_NUMBER, LAST_NUMBER)
 
 
 def check_answer(user_answer, correct_answer, user_name, game_round):
@@ -42,5 +44,5 @@ def check_answer(user_answer, correct_answer, user_name, game_round):
         \nCorrect answer was '{correct_answer}'.
         \nLet's try again, {user_name}!"""
         print(message)
-        game_round = 3
+        game_round = ROUNDS_TOTAL
         return game_round

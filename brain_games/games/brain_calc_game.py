@@ -1,6 +1,8 @@
 from random import choice
 from brain_games.engine import (
-    get_user_answer, generate_number, welcome_user, check_answer)
+    ROUNDS_TOTAL, get_user_answer, generate_number, welcome_user, check_answer)
+
+DESCRIPTION = 'What is the result of the expression?'
 
 
 def get_result(operator, first_number, second_number):
@@ -21,10 +23,9 @@ def get_result(operator, first_number, second_number):
 def run_brain_calc_game():
     """Brain Calc game logic"""
     user_name = welcome_user()
-    description = 'What is the result of the expression?'
-    print(description)
+    print(DESCRIPTION)
     game_round = 0
-    while game_round < 3:
+    while game_round < ROUNDS_TOTAL:
         first_number = generate_number()
         second_number = generate_number()
         operator = choice(['+', '-', '*'])

@@ -1,9 +1,9 @@
-import prompt
+from brain_games.engine import get_user_name
 
 
 def welcome_user():
     """Asks user for his name and greets him"""
-    print('Welcome to the Brain Games!')
-    user_name = prompt.string('May I have your name? ')
+    user_name = get_user_name()
     greeting = f'Hello, {user_name}!'
     print(greeting)
+    return user_name

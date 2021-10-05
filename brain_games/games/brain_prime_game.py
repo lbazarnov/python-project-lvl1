@@ -1,18 +1,20 @@
 from brain_games.engine import (
-    get_user_answer, generate_number, welcome_user, check_answer)
+    ROUNDS_TOTAL, get_user_answer, generate_number, welcome_user, check_answer)
+
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(number):
     if number < 2:
         return False
 
-    divider = 2
+    divisor = 2
 
-    while divider <= number / 2:
-        if number % divider == 0:
+    while divisor <= number / 2:
+        if number % divisor == 0:
             return False
 
-        divider += 1
+        divisor += 1
 
     return True
 
@@ -20,11 +22,10 @@ def is_prime(number):
 def run_brain_prime_game():
     """Brain Prime game logic"""
     user_name = welcome_user()
-    description = 'Answer "yes" if given number is prime. Otherwise answer "no".'  # noqa: E501 :)
-    print(description)
+    print(DESCRIPTION)
     game_round = 0
 
-    while game_round < 3:
+    while game_round < ROUNDS_TOTAL:
         number = generate_number()
         print(f'Question: {number}')
 
