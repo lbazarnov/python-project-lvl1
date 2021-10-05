@@ -1,5 +1,4 @@
-from brain_games.engine import (
-    get_user_answer, generate_number, welcome_user, check_answer)
+from brain_games.engine import generate_number
 from random import randint
 
 DESCRIPTION = 'What number is missing in the progression?'
@@ -25,16 +24,9 @@ def create_progression():
     return progression, correct_answer
 
 
-def run_brain_progression_game():
+def dispatch_answer():
     """Brain Progression game logic"""
-    user_name = welcome_user()
-    print(DESCRIPTION)
-    game_round = 0
+    question, correct_answer = create_progression()
+    question = f'Question: {question}'
 
-    while game_round < 3:
-        question, correct_answer = create_progression()
-        print(f'Question: {question}')
-        user_answer = get_user_answer()
-
-        game_round = check_answer(
-            user_answer, correct_answer, user_name, game_round)
+    return question, correct_answer

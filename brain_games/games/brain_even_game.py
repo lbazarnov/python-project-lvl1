@@ -1,23 +1,16 @@
-from brain_games.engine import (
-    ROUNDS_TOTAL, get_user_answer, generate_number, welcome_user, check_answer)
+from brain_games.engine import generate_number
 
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def run_brain_even_game():
+def dispatch_answer():
     """Brain Even game logic"""
-    user_name = welcome_user()
-    print(DESCRIPTION)
-    game_round = 0
-    while game_round < ROUNDS_TOTAL:
-        number = generate_number()
-        print(f'Question: {number}')
-        user_answer = get_user_answer()
+    number = generate_number()
+    question = f'Question: {number}'
 
-        if number % 2 == 0:
-            correct_answer = 'yes'
-        else:
-            correct_answer = 'no'
+    if number % 2 == 0:
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
 
-        game_round = check_answer(
-            user_answer, correct_answer, user_name, game_round)
+    return question, correct_answer

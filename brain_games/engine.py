@@ -36,7 +36,7 @@ def check_answer(user_answer, correct_answer, user_name, game_round):
         message = 'Correct!'
         print(message)
         game_round += 1
-        if game_round == 3:
+        if game_round == ROUNDS_TOTAL:
             print(f'Congratulations, {user_name}!')
         return game_round
     else:
@@ -46,3 +46,16 @@ def check_answer(user_answer, correct_answer, user_name, game_round):
         print(message)
         game_round = ROUNDS_TOTAL
         return game_round
+
+
+def start_game(game):
+    """Runs a selected game"""
+    user_name = welcome_user()
+    print(game.DESCRIPTION)
+    game_round = 0
+    while game_round < ROUNDS_TOTAL:
+        question, correct_answer = game.dispatch_answer()
+        print(question)
+        user_answer = get_user_answer()
+        game_round = check_answer(
+            user_answer, correct_answer, user_name, game_round)
