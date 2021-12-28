@@ -2,32 +2,13 @@ import prompt
 from random import randint
 
 ROUNDS_TOTAL = 3
-FIRST_NUMBER = 1
-LAST_NUMBER = 100
-
-
-def get_user_name():
-    """Prompt user for his name"""
-    print('Welcome to the Brain Games!')
-    return prompt.string('May I have your name? ')
-
-
-def welcome_user():
-    """Asks user for his name and greets him"""
-    user_name = get_user_name()
-    greeting = f'Hello, {user_name}!'
-    print(greeting)
-    return user_name
-
-
-def get_user_answer():
-    """Prompt user for his answer"""
-    return prompt.string('Your answer: ')
+START = 1
+FINISH = 100
 
 
 def generate_number():
     """Generates random number in range of 1 to 100"""
-    return randint(FIRST_NUMBER, LAST_NUMBER)
+    return randint(START, FINISH)
 
 
 def check_answer(user_answer, correct_answer, user_name, game_round):
@@ -50,12 +31,15 @@ def check_answer(user_answer, correct_answer, user_name, game_round):
 
 def start_game(game):
     """Runs a selected game"""
-    user_name = welcome_user()
+    print('Welcome to the Brain Games!')
+    user_name = prompt.string('May I have your name? ')
+    greeting = f'Hello, {user_name}!'
+    print(greeting)
     print(game.DESCRIPTION)
     game_round = 0
     while game_round < ROUNDS_TOTAL:
-        question, correct_answer = game.dispatch_answer()
+        question, correct_answer = game.get_question_and_answer()
         print(question)
-        user_answer = get_user_answer()
+        user_answer = prompt.string('Your answer: ')
         game_round = check_answer(
             user_answer, correct_answer, user_name, game_round)

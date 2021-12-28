@@ -15,18 +15,24 @@ def create_progression():
         progression.append(number)
         number += progression_difference
 
-    random_item = randint(2, len(progression)) - 1
-    correct_answer = str(progression[random_item])
+    return progression
+
+
+def convert_progression():
+    """Converts progression to string"""
+    progression = create_progression()
+    puzzled_item = randint(2, len(progression)) - 1
+    correct_answer = str(progression[puzzled_item])
     dots = '..'
-    progression[random_item] = dots
+    progression[puzzled_item] = dots
     progression = ' '.join([str(i) for i in progression])
 
     return progression, correct_answer
 
 
-def dispatch_answer():
+def get_question_and_answer():
     """Brain Progression game logic"""
-    question, correct_answer = create_progression()
-    question = f'Question: {question}'
+    progression, correct_answer = convert_progression()
+    question = f'Question: {progression}'
 
     return question, correct_answer

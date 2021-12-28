@@ -19,7 +19,7 @@ def is_prime(number):
     return True
 
 
-def dispatch_answer():
+def get_question_and_answer():
     """Brain Prime game logic"""
     number = generate_number()
     question = f'Question: {number}'

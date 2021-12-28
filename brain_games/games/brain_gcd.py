@@ -15,7 +15,7 @@ def get_gcd(first_number, second_number):
     return a
 
 
-def dispatch_answer():
+def get_question_and_answer():
     """Brain GCD game logic"""
     first_number = generate_number()
     second_number = generate_number()

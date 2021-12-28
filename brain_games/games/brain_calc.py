@@ -19,7 +19,7 @@ def get_result(operator, first_number, second_number):
         return result
 
 
-def dispatch_answer():
+def get_question_and_answer():
     """Brain Calc game logic"""
     first_number = generate_number()
     second_number = generate_number()
