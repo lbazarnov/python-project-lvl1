@@ -4,21 +4,16 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def get_gcd(first_number, second_number):
-    """Finds GCD of two numbers"""
-    a = first_number
-    b = second_number
-    while a != b:
-        if a > b:
-            a = a - b
-        else:
-            b = b - a
-    return a
+    while second_number != 0:
+        first_number, second_number = second_number, first_number % second_number  # noqa: E501
+
+    return first_number
 
 
 def get_question_and_answer():
     """Brain GCD game logic"""
     first_number = generate_number()
     second_number = generate_number()
-    question = f'Question: {first_number} {second_number}'
+    question = f'{first_number} {second_number}'
     correct_answer = str(get_gcd(first_number, second_number))
     return question, correct_answer

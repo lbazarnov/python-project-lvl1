@@ -21,10 +21,9 @@ def is_prime(number):
 
 def get_question_and_answer():
     """Brain Prime game logic"""
-    number = generate_number()
-    question = f'Question: {number}'
+    question = generate_number()
 
-    if is_prime(number):
+    if is_prime(question):
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
